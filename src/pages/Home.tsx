@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import cards from "../assets/fakeData/card";
+import cards from "../assets/fakeData/cards";
 import Card from "../components/Card";
 
 const Home = () => {
