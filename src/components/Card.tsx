@@ -14,6 +14,9 @@ const CardComponent = ({ card }: { card: Card }) => {
           {card.validThrough.month}/{card.validThrough.year}
         </li>
         <li>{cardVendor.color}</li>
+        <li>
+          <img src={`../assets/img/${cardVendor.icon}`} />
+        </li>
       </ul>
     </div>
   );
