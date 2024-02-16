@@ -7,7 +7,7 @@ const CardComponent = ({ card }: { card: Card }) => {
 
   return (
     <div>
-      <ul>
+      <ul style={{ backgroundColor: cardVendor.color, color: cardVendor.textColor }}>
         <li>{card.cardNumber}</li>
         <li>{card.name}</li>
         <li>
