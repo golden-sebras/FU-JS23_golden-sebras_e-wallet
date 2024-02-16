@@ -7,8 +7,8 @@ const CardStack = ({ cards }: { cards: Card[] }) => {
   return (
     <ul>
       {inactiveCards.map((card) => (
-        <li>
-          <CardComponent key={card.id} card={card} />
+        <li key={card.id}>
+          <CardComponent card={card} />
         </li>
       ))}
     </ul>
