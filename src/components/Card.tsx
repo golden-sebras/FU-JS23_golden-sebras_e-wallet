@@ -1,6 +1,10 @@
-import Card from "../assets/types/card";
+import Card from "../types/card";
+import vendors from "../assets/constants/vendors";
+import Vendor from "../types/vendor";
 
 const CardComponent = ({ card }: { card: Card }) => {
+  const cardVendor = vendors.find((vendor) => vendor.id === card.vendorId) as Vendor;
+
   return (
     <div>
       <ul>
@@ -9,6 +13,7 @@ const CardComponent = ({ card }: { card: Card }) => {
         <li>
           {card.validThrough.month}/{card.validThrough.year}
         </li>
+        <li>{cardVendor.color}</li>
       </ul>
     </div>
   );

@@ -1,4 +1,4 @@
-import Card from "../types/card";
+import Card from "../../types/card";
 
 const cards: Card[] = [
   {
@@ -22,7 +22,7 @@ const cards: Card[] = [
       year: "24",
     },
     ccv: 123,
-    vendorId: 1,
+    vendorId: 2,
     active: false,
   },
   {
@@ -34,7 +34,7 @@ const cards: Card[] = [
       year: "24",
     },
     ccv: 123,
-    vendorId: 1,
+    vendorId: 3,
     active: false,
   },
   {
