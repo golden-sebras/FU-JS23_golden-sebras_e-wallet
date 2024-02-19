@@ -9,14 +9,14 @@ const Home = () => {
   const activeCard = cards.find((card) => card.active === true) as Card;
 
   return (
-    <>
+    <section className="home">
       <Top title="E-wallet" />
       <h2>Active card</h2>
       <CardComponent card={activeCard} />
       <h2>Inactive cards</h2>
       <CardStack cards={cards} />
       <Link to="/addcard">Add card</Link>
-    </>
+    </section>
   );
 };
 

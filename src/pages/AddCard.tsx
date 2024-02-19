@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Top from "../components/Top";
 import CardForm from "../components/CardForm";
 import Card from "../types/card";
-
+import "./AddCard.scss";
 import { useState } from "react";
 import CardComponent from "../components/Card";
 
@@ -41,7 +41,7 @@ const AddCard = () => {
   };
 
   return (
-    <>
+    <section className="add-card">
       <Top title="Add a new bank card" />
       <Link to="/">Home</Link>
       <CardComponent card={temporaryCard} />
@@ -50,7 +50,7 @@ const AddCard = () => {
         onChange={handleInputChange}
         onSubmit={handleSubmit}
       />
-    </>
+    </section>
   );
 };
 
