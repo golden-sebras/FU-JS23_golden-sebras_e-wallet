@@ -2,12 +2,9 @@ interface Card {
   id: number;
   cardNumber: string;
   name: string;
-  validThrough: {
-    month: string;
-    year: string;
-  };
-  ccv: number;
-  vendorId: number;
+  validThrough: string;
+  ccv: string;
+  vendorId: string;
   active: boolean;
 }
 
