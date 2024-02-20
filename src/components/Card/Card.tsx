@@ -6,17 +6,10 @@ import chipLogo from "../../assets/img/chip.png";
 import wifiLogo from "../../assets/img/wifi.png";
 
 const CardComponent = ({ card }: { card: Card }) => {
-  const cardVendor = vendors.find(
-    (vendor) => vendor.id === card.vendorId
-  ) as Vendor;
-
-  console.log(cardVendor);
+  const cardVendor = vendors.find((vendor) => vendor.id === card.vendorId) as Vendor;
 
   return (
-    <div
-      className="card"
-      style={{ backgroundColor: cardVendor.color, color: cardVendor.textColor }}
-    >
+    <div className="card" style={{ backgroundColor: cardVendor.color, color: cardVendor.textColor }}>
       <div className="card__header">
         <div className="card__wifi-chip-container">
           <img
@@ -47,7 +40,7 @@ const CardComponent = ({ card }: { card: Card }) => {
         />
       </div>
 
-      <p className="card__cardNumber">{card.cardNumber}</p>
+      <p className="card__cardNumber">{card.cardNumber.length > 0 ? card.cardNumber : "XXXX XXXX XXXX XXXX"}</p>
 
       <div className="card__holder-valid-thru-container">
         <p className="card-title-text">CARDHOLDER NAME</p>
@@ -55,8 +48,8 @@ const CardComponent = ({ card }: { card: Card }) => {
       </div>
 
       <div className="card__name-date-container">
-        <p className="card-text">{card.name}</p>
-        <p className="card-text">{card.validThrough}</p>
+        <p className="card-text">{card.name.length > 0 ? card.name : "FIRSTNAME LASTNAME"}</p>
+        <p className="card-text">{card.validThrough.length > 0 ? card.validThrough : "MM/YY"}</p>
       </div>
     </div>
   );

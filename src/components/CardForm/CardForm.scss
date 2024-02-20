@@ -17,6 +17,7 @@ select {
 label {
   margin: 0.7rem 0 0.3rem 0;
   font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .card-form__valid-ccv {
@@ -27,6 +28,7 @@ label {
 
 select {
   appearance: none;
+  background-color: #fff;
   background-image: url(../../assets/chevron/Vector.png);
   background-repeat: no-repeat;
   background-position: right 1rem center;
