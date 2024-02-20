@@ -1,7 +1,7 @@
 import { ChangeEventHandler, MouseEventHandler } from "react";
-import vendors from "../assets/constants/vendors";
-import Card from "../types/card";
-
+import vendors from "../../assets/constants/vendors";
+import Card from "../../types/card";
+import "./CardForm.scss";
 const CardForm = ({
   card,
   onChange,
@@ -12,7 +12,7 @@ const CardForm = ({
   onSubmit: MouseEventHandler;
 }) => {
   return (
-    <form>
+    <form className="card-form">
       <label htmlFor="cardNumber">CARD NUMBER</label>
       <input
         type="number"
@@ -32,16 +32,18 @@ const CardForm = ({
         onChange={onChange}
         required
       />
-      <label htmlFor="validThrough">VALID THRU</label>
-      <input
-        type="text"
-        name="validThrough"
-        id="validThrough"
-        required
-        onChange={onChange}
-      />
-      <label htmlFor="ccv">CCV</label>
-      <input type="text" name="ccv" id="ccv" required onChange={onChange} />
+      <div className="card-form__valid-ccv">
+        <label htmlFor="validThrough">VALID THRU</label>
+        <input
+          type="text"
+          name="validThrough"
+          id="validThrough"
+          required
+          onChange={onChange}
+        />
+        <label htmlFor="ccv">CCV</label>
+        <input type="text" name="ccv" id="ccv" required onChange={onChange} />
+      </div>
       <label htmlFor="vendorId">VENDOR</label>
       <select
         id="vendorId"
