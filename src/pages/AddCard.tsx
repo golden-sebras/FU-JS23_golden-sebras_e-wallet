@@ -20,17 +20,20 @@ const AddCard = () => {
   const [temporaryCard, setTemporaryCard] = useState(initialCard);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    let { name, value } = event.target;
+    const re = /^[0-9\s\b]+$/;
 
-    setTemporaryCard((prevInput) => ({
-      ...prevInput,
-      [name]: value,
-    }));
+    if (re.test(event.target.value) || event.target.value === "") {
+      const { name, value } = event.target;
+
+      setTemporaryCard((prevInput) => ({
+        ...prevInput,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = (): void => {
-    let lastCardId =
-      JSON.parse(localStorage.getItem("lastCardId") as string) || 0;
+    const lastCardId = JSON.parse(localStorage.getItem("lastCardId") as string) || 0;
     const newCardId = lastCardId + 1;
     localStorage.setItem("lastCardId", newCardId);
 
@@ -45,11 +48,7 @@ const AddCard = () => {
       <Top title="Add a new bank card" />
       <Link to="/">Home</Link>
       <CardComponent card={temporaryCard} />
-      <CardForm
-        card={temporaryCard}
-        onChange={handleInputChange}
-        onSubmit={handleSubmit}
-      />
+      <CardForm card={temporaryCard} onChange={handleInputChange} onSubmit={handleSubmit} />
     </section>
   );
 };
