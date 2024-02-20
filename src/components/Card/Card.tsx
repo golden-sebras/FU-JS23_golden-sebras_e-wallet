@@ -1,7 +1,7 @@
 import "./Card.scss"
-import Card from "../types/card";
-import vendors from "../assets/constants/vendors";
-import Vendor from "../types/vendor";
+import Card from "../../types/card";
+import vendors from "../../assets/constants/vendors";
+import Vendor from "../../types/vendor";
 import chipLogo from "../../public/assets/img/chip.png" 
 import wifiLogo from "../../public/assets/img/wifi.png"
 
@@ -44,7 +44,7 @@ const CardComponent = ({ card }: { card: Card }) => {
       </div>
     
       <p className="card__cardNumber">{card.cardNumber}</p> 
-    
+      
       <div className="card__holder-valid-thru-container">
         <p className="card-title-text">CARDHOLDER NAME</p>
         <p className="card-title-text">VALID THRU</p>
