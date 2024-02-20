@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Inter&family=Karla&family=Lora&family=PT+Mono&family=Poppins&family=Roboto&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Mono";
+
+}
+
+.card {
+    width: 382px;
+    height: 241px;
+    padding: 30px 20px;
+    border-radius: 5px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wifi-chip-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__cardNumber {
+        font-size: 29px;
+        margin-top: 10px;
+        text-shadow: -0.5px -0.5px 0 grey,
+        -1px -1px 0 grey;
+
+    }
+
+    &__holder-valid-thru-container {
+        display: flex;
+        justify-content: space-between;
+
+        .card-title-text {
+            font-size: 12px;
+            margin-top: 20px;
+            text-shadow: -0.5px -0.5px 0 #828282,
+            -1px -1px 0 #828282;
+        }
+    }
+
+    &__name-date-container {
+        display: flex;
+        justify-content: space-between;
+
+        .card-text {
+            font-size: 18px;
+            margin-top: 5px;
+            text-shadow: -0.5px -0.5px 0 #828282,
+            -1px -1px 0 #828282;
+
+        }
+    }
+}
