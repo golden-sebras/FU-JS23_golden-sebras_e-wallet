@@ -18,7 +18,7 @@ const CardComponent = ({ card }: { card: Card }) => {
             style={{
               height: "44px",
               width: "44px",
-              filter: cardVendor.id === "1" ? "none" : "invert(100%)",
+              filter: cardVendor.id === "0" || cardVendor.id === "1" ? "none" : "invert(100%)",
             }}
           />
           <img

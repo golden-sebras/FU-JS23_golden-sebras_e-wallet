@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import Home from "./pages/Home.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AddCard from "./pages/AddCard.tsx";
+import "./main.scss";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,4 @@ const router = createBrowserRouter([
   },
 ]);
 
-createRoot(document.getElementById("root")!).render(
-  <RouterProvider router={router} />
-);
+createRoot(document.getElementById("root")!).render(<RouterProvider router={router} />);

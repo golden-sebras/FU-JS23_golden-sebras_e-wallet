@@ -34,7 +34,7 @@ const CardForm = ({
 
   return (
     <form className="card-form">
-      <label htmlFor="cardNumber">CARD NUMBER</label>
+      <label htmlFor="cardNumber">Card number</label>
       <input
         type="text"
         name="cardNumber"
@@ -45,10 +45,10 @@ const CardForm = ({
         onKeyDown={handleCardNumberChange}
         required
       />
-      <label htmlFor="name">CARDHOLDER NAME</label>
-      <input type="text" name="name" id="name" placeholder="FIRSTNAME LASTNAME" onChange={onChange} required />
+      <label htmlFor="name">Cardholder name</label>
+      <input type="text" name="name" id="name" placeholder="Firstname Lastname" onChange={onChange} required />
       <div className="card-form__valid-ccv">
-        <label htmlFor="validThrough">VALID THRU</label>
+        <label htmlFor="validThrough">Valid Thru</label>
         <input
           type="text"
           name="validThrough"
@@ -61,7 +61,7 @@ const CardForm = ({
         <label htmlFor="ccv">CCV</label>
         <input type="text" name="ccv" placeholder="123" id="ccv" required onChange={onChange} />
       </div>
-      <label htmlFor="vendorId">VENDOR</label>
+      <label htmlFor="vendorId">Vendor</label>
       <select id="vendorId" name="vendorId" defaultValue={"0"} onChange={onChange} required>
         {vendors.map((vendor) => (
           <option key={`vendor-${vendor.id}`} value={vendor.id}>
