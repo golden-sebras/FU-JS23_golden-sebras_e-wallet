@@ -4,7 +4,7 @@ import CardForm from "../components/CardForm";
 import Card from "../types/card";
 import "./AddCard.scss";
 import { useState } from "react";
-import CardComponent from "../components/Card";
+import CardComponent from "../components/Card/Card";
 
 const AddCard = () => {
   const initialCard: Card = {

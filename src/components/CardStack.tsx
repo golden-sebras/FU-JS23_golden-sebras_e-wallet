@@ -1,5 +1,5 @@
 import Card from "../types/card";
-import CardComponent from "./Card";
+import CardComponent from "./Card/Card";
 
 const CardStack = ({ cards }: { cards: Card[] }) => {
   const inactiveCards = cards.filter((card) => card.active === false) as Card[];

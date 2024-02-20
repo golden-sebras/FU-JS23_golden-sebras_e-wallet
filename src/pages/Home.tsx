@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import cards from "../assets/fakeData/cards";
-import CardComponent from "../components/Card";
+import CardComponent from "../components/Card/Card";
 import Card from "../types/card";
 import CardStack from "../components/CardStack";
 import Top from "../components/Top";
