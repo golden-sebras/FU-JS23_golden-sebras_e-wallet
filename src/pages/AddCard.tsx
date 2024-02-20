@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Top from "../components/Top";
-import CardForm from "../components/CardForm";
+import CardForm from "../components/CardForm/CardForm";
 import Card from "../types/card";
 import "./AddCard.scss";
 import { useState } from "react";

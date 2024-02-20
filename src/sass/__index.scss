@@ -1,2 +1,11 @@
 @forward "./variables";
 @forward "./_mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Chicle&family=Inter&family=Karla&family=Lora&family=PT+Mono&family=Poppins&family=Roboto&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Mono";
+}
