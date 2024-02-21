@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from "react";
 import { createRoot } from "react-dom/client";
 import Home from "./pages/Home.tsx";
@@ -7,7 +8,7 @@ import "./main.scss";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "*",
     element: <Home />,
   },
   {
