@@ -1,4 +1,3 @@
-import { NavigateFunction } from "react-router-dom";
 import "./BigButton.scss";
 
 const Button = ({
@@ -10,7 +9,7 @@ const Button = ({
   text: string;
   background: string;
   color: string;
-  onClick: NavigateFunction;
+  onClick: () => void;
 }) => {
   return (
     <a style={{ backgroundColor: background, color: color }} onClick={onClick}>
