@@ -5,11 +5,15 @@ import Vendor from "../../types/vendor";
 import chipLogo from "../../assets/img/chip.png";
 import wifiLogo from "../../assets/img/wifi.png";
 
-const CardComponent = ({ card }: { card: Card }) => {
+const CardComponent = ({ card, makeCardActive }: { card: Card; makeCardActive?: (id: number) => void }) => {
   const cardVendor = vendors.find((vendor) => vendor.id === card.vendorId) as Vendor;
 
   return (
-    <div className="card" style={{ backgroundColor: cardVendor.color, color: cardVendor.textColor }}>
+    <div
+      className="card"
+      style={{ backgroundColor: cardVendor.color, color: cardVendor.textColor }}
+      {...(makeCardActive ? { onClick: makeCardActive } : {})}
+    >
       <div className="card__header">
         <div className="card__wifi-chip-container">
           <img
@@ -56,20 +60,3 @@ const CardComponent = ({ card }: { card: Card }) => {
 };
 
 export default CardComponent;
-
-{
-  /* <ul
-style={{
-  backgroundColor: cardVendor.color,
-  color: cardVendor.textColor,
-}}
->
-<li>{card.cardNumber}</li>
-<li>CARDHOLDER NAME{card.name}</li>
-<li>{card.validThrough}</li>
-<li>{cardVendor.color}</li>
-<li>
-  <img src={`../assets/img/${cardVendor.icon}`} />
-</li>
-</ul> */
-}
