@@ -2,6 +2,7 @@ import { ChangeEventHandler, MouseEventHandler } from "react";
 import vendors from "../../assets/constants/vendors";
 import Card from "../../types/card";
 import "./CardForm.scss";
+import BigButton from "../BigButton/BigButton";
 
 const CardForm = ({
   card,
@@ -69,7 +70,7 @@ const CardForm = ({
           </option>
         ))}
       </select>
-      <button onClick={onSubmit}>ADD CARD</button>
+      <BigButton text="Add card" background="black" color="white" />
     </form>
   );
 };

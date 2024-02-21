@@ -10,6 +10,7 @@ const CardStack = ({ cards }: { cards: Card[] }) => {
       {inactiveCards.map((card, i) => (
         <div key={card.id} className="cardStack-card" style={{ zIndex: `${i}` }}>
           <CardComponent card={card} />
+          <button>Remove card</button>
         </div>
       ))}
     </div>
