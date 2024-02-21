@@ -1,0 +1,12 @@
+.wallet-container {
+  list-style-type: none;
+  min-height: 341px;
+}
+
+.cardStack-card {
+  margin-top: -188px;
+  position: relative;
+  &:first-child {
+    margin-top: 0;
+  }
+}
