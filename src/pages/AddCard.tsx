@@ -4,8 +4,11 @@ import Card from "../types/card";
 import "./AddCard.scss";
 import { useState } from "react";
 import CardComponent from "../components/Card/Card";
+import { useNavigate } from "react-router-dom";
 
 const AddCard = () => {
+  const navigate = useNavigate();
+
   const initialCard: Card = {
     id: 0,
     cardNumber: "",
@@ -40,6 +43,8 @@ const AddCard = () => {
     temporaryCard.id = newCardId;
     temp.push(temporaryCard);
     localStorage.setItem("cards", JSON.stringify(temp));
+
+    navigate("/");
   };
 
   return (

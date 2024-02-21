@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import cards from "../assets/fakeData/cards";
 import CardComponent from "../components/Card/Card";
 import Card from "../types/card";
@@ -10,13 +10,18 @@ import BigButton from "../components/BigButton/BigButton";
 const Home = () => {
   const activeCard = cards.find((card) => card.active === true) as Card;
 
+  const navigate = useNavigate();
+  const toAddCard = () => {
+    navigate("/addcard");
+  };
+
   return (
     <section className="home">
       <Top title="E-wallet" />
       <h3 className="sub-title">Active card</h3>
       <CardComponent card={activeCard} />
       <CardStack cards={cards} />
-      <BigButton text="Add a new card" background="white" color="black" />
+      <BigButton text="Add a new card" background="white" color="black" onClick={toAddCard} />
     </section>
   );
 };

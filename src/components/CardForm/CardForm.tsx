@@ -70,7 +70,7 @@ const CardForm = ({
           </option>
         ))}
       </select>
-      <BigButton text="Add card" background="black" color="white" />
+      <BigButton text="Add card" background="black" color="white" onClick={onSubmit} />
     </form>
   );
 };
