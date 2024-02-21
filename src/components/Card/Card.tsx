@@ -5,7 +5,13 @@ import Vendor from "../../types/vendor";
 import chipLogo from "../../assets/img/chip.png";
 import wifiLogo from "../../assets/img/wifi.png";
 
-const CardComponent = ({ card, makeCardActive }: { card: Card; makeCardActive?: (id: number) => void }) => {
+const CardComponent = ({
+  card,
+  makeCardActive,
+}: {
+  card: Card;
+  makeCardActive?: React.MouseEventHandler<HTMLDivElement>;
+}) => {
   const cardVendor = vendors.find((vendor) => vendor.id === card.vendorId) as Vendor;
 
   return (
