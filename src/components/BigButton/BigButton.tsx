@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react";
 import "./BigButton.scss";
 
 const Button = ({
@@ -9,7 +10,7 @@ const Button = ({
   text: string;
   background: string;
   color: string;
-  onClick: () => void;
+  onClick: MouseEventHandler;
 }) => {
   return (
     <a style={{ backgroundColor: background, color: color }} onClick={onClick}>
