@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import Top from "../components/Top";
+import Top from "../components/Top/Top";
 import CardForm from "../components/CardForm/CardForm";
 import Card from "../types/card";
 import "./AddCard.scss";
@@ -46,7 +45,7 @@ const AddCard = () => {
   return (
     <section className="add-card">
       <Top title="Add a new bank card" />
-      <Link to="/">Home</Link>
+      <h3 className="sub-title">Add card</h3>
       <CardComponent card={temporaryCard} />
       <CardForm card={temporaryCard} onChange={handleInputChange} onSubmit={handleSubmit} />
     </section>

@@ -3,7 +3,7 @@ import Card from "../../types/card";
 const cards: Card[] = [
   {
     id: 1,
-    cardNumber: "1234123412341234",
+    cardNumber: "1234 1234 1234 1234",
     name: "Test Testsson",
     validThrough: "12/24",
     ccv: "123",
@@ -12,7 +12,7 @@ const cards: Card[] = [
   },
   {
     id: 2,
-    cardNumber: "1234123412341234",
+    cardNumber: "1234 1234 1234 1234",
     name: "Test Testsson",
     validThrough: "12/24",
     ccv: "123",
@@ -21,7 +21,7 @@ const cards: Card[] = [
   },
   {
     id: 3,
-    cardNumber: "1234123412341234",
+    cardNumber: "1234 1234 1234 1234",
     name: "Test Testsson",
     validThrough: "12/24",
     ccv: "123",
@@ -30,7 +30,7 @@ const cards: Card[] = [
   },
   {
     id: 4,
-    cardNumber: "1234123412341234",
+    cardNumber: "1234 1234 1234 1234",
     name: "Test Testsson",
     validThrough: "12/24",
     ccv: "123",

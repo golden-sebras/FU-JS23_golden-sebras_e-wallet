@@ -1,7 +1,6 @@
 .card-form {
   display: flex;
   flex-direction: column;
-  width: 382px;
   margin-top: 2rem;
 }
 
@@ -11,7 +10,6 @@ select {
   padding: 15px;
   border-radius: 8px;
   border: 1px solid rgba($color: #000000, $alpha: 0.8);
-  text-transform: uppercase;
 }
 
 label {
@@ -33,15 +31,4 @@ select {
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 12px;
-}
-
-button {
-  background-color: black;
-  color: white;
-  font-size: 22px;
-  padding: 24.64px;
-  border: none;
-  border-radius: 8px;
-  margin-top: 3rem;
-  font-weight: 700;
 }

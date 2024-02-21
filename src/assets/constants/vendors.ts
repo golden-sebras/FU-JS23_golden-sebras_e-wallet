@@ -7,6 +7,7 @@ const vendors: Vendor[] = [
     color: "#D0D0D0",
     textColor: "#000000",
     icon: "bitcoin.svg",
+    wifiIcon: "wifi-black",
   },
   {
     id: "1",
@@ -14,6 +15,7 @@ const vendors: Vendor[] = [
     color: "#FFAE34",
     textColor: "#000000",
     icon: "bitcoin.svg",
+    wifiIcon: "wifi-black",
   },
   {
     id: "2",
@@ -21,6 +23,7 @@ const vendors: Vendor[] = [
     color: "#222222",
     textColor: "#ffffff",
     icon: "ninja-bank.svg",
+    wifiIcon: "wifi-white",
   },
   {
     id: "3",
@@ -28,6 +31,7 @@ const vendors: Vendor[] = [
     color: "#8B58F9",
     textColor: "#ffffff",
     icon: "block-chain.svg",
+    wifiIcon: "wifi-white",
   },
   {
     id: "4",
@@ -35,6 +39,7 @@ const vendors: Vendor[] = [
     color: "#F33355",
     textColor: "#ffffff",
     icon: "evil-corp.svg",
+    wifiIcon: "wifi-white",
   },
 ];
 

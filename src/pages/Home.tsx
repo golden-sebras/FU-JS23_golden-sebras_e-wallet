@@ -3,8 +3,9 @@ import cards from "../assets/fakeData/cards";
 import CardComponent from "../components/Card/Card";
 import Card from "../types/card";
 import CardStack from "../components/CardStack/CardStack";
-import Top from "../components/Top";
-import "./Home.scss"
+import Top from "../components/Top/Top";
+import "./Home.scss";
+import BigButton from "../components/BigButton/BigButton";
 
 const Home = () => {
   const activeCard = cards.find((card) => card.active === true) as Card;
@@ -12,11 +13,10 @@ const Home = () => {
   return (
     <section className="home">
       <Top title="E-wallet" />
-      <h2>Active card</h2>
+      <h3 className="sub-title">Active card</h3>
       <CardComponent card={activeCard} />
-      <h2>Inactive cards</h2>
       <CardStack cards={cards} />
-      <Link to="/addcard" className="linkBtn">Add card</Link>
+      <BigButton text="Add a new card" background="white" color="black" />
     </section>
   );
 };

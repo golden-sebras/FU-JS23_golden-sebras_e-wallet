@@ -4,6 +4,7 @@ interface Vendor {
   color: string;
   textColor: string;
   icon: string;
+  wifiIcon: string;
 }
 
 export default Vendor;
