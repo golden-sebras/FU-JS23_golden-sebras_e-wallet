@@ -1,7 +1,22 @@
+import { NavigateFunction } from "react-router-dom";
 import "./BigButton.scss";
 
-const Button = ({ text, background, color }: { text: string; background: string; color: string }) => {
-  return <a style={{ backgroundColor: background, color: color }}>{text}</a>;
+const Button = ({
+  text,
+  background,
+  color,
+  onClick,
+}: {
+  text: string;
+  background: string;
+  color: string;
+  onClick: NavigateFunction;
+}) => {
+  return (
+    <a style={{ backgroundColor: background, color: color }} onClick={onClick}>
+      {text}
+    </a>
+  );
 };
 
 export default Button;
