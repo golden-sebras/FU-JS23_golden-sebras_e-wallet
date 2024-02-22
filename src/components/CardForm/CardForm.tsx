@@ -1,8 +1,8 @@
 import { ChangeEventHandler, MouseEventHandler } from "react";
 import vendors from "../../assets/constants/vendors";
-import "./CardForm.scss";
 import BigButton from "../BigButton/BigButton";
 import Card from "../../types/card";
+import "./CardForm.scss";
 
 const CardForm = ({
   card,
@@ -100,5 +100,3 @@ const CardForm = ({
 };
 
 export default CardForm;
-
-//Todo - Säkerställ att enbart nummer kan matas in i kortnummer(input) och att enbart bokstäver på "Cardholder Name"

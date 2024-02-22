@@ -1,5 +1,5 @@
-import Card from "../../types/card";
 import CardComponent from "../Card/Card";
+import Card from "../../types/card";
 import "./CardStack.scss";
 
 const CardStack = ({ cards, handleUpdateCards }: { cards: Card[]; handleUpdateCards: (cards: Card[]) => void }) => {
