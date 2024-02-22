@@ -19,7 +19,7 @@ const Home = () => {
 
   const navigate = useNavigate();
   const toAddCard = (): void => {
-    navigate("/addcard");
+    navigate("addcard");
   };
 
   return (
