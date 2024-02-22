@@ -1,3 +1,7 @@
+@use "./sass/" as *;
+@use "sass:map";
+@use "sass:color";
+
 @import url("https://fonts.googleapis.com/css2?family=Chicle&family=Inter&family=Karla&family=Lora&family=PT+Mono&family=Poppins&family=Roboto&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap");
 
 * {
@@ -30,7 +34,7 @@ section {
 
 .sub-title {
   text-align: center;
-  color: rgba(34, 34, 34, 0.6);
+  color: transparentize(map-get($theme-colors, "dark-gray"), 0.4);
   font-size: 12px;
   font-weight: 600;
   margin: 10px 0;

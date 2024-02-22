@@ -13,7 +13,7 @@ const Button = ({
   onClick: MouseEventHandler;
 }) => {
   return (
-    <a style={{ backgroundColor: background, color: color }} onClick={onClick}>
+    <a style={{ backgroundColor: background, color: color }} className="big-button" onClick={onClick}>
       {text}
     </a>
   );
