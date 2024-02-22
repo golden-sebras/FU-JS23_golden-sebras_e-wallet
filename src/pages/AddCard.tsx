@@ -1,10 +1,10 @@
-import Top from "../components/Top/Top";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import CardComponent from "../components/Card/Card";
 import CardForm from "../components/CardForm/CardForm";
+import Top from "../components/Top/Top";
 import Card from "../types/card";
 import "./AddCard.scss";
-import { useState } from "react";
-import CardComponent from "../components/Card/Card";
-import { useNavigate } from "react-router-dom";
 
 const AddCard = () => {
   const navigate = useNavigate();
@@ -25,25 +25,31 @@ const AddCard = () => {
     const { name, value } = event.target;
 
     if (name === "cardNumber" || name === "ccv") {
+      // Ta bort mellanslag och gör om från string till number
       const parsedValue = Number(value.replace(/ /g, ""));
 
+      // Om parsedValue inte är number, gör ingenting annars uppdatera temporaryCard
       !isNaN(parsedValue) &&
         setTemporaryCard((prevInput) => ({
           ...prevInput,
           [name]: value,
         }));
     } else if (name === "validThrough") {
+      // Ta bort slash och gör om från string till number
       const parsedValue = Number(value.replace(/\//g, ""));
 
+      // Om parsedValue inte är number, göt ingenting annars uppdatera temporaryCard
       !isNaN(parsedValue) &&
         setTemporaryCard((prevInput) => ({
           ...prevInput,
           [name]: value,
         }));
     } else if (name === "name") {
-      const numbers = Number(value.match(/\d/g)?.join(""));
+      // Matcha alla tecken som inte är bokstäver
+      const nonLetters = value.match(/[^a-zA-Z\u00C0-\u017F\s]/g);
 
-      isNaN(numbers) &&
+      // Uppdatera temporaryCard om vi inte fyllt i otillåtna tecken
+      !nonLetters &&
         setTemporaryCard((prevInput) => ({
           ...prevInput,
           [name]: value,

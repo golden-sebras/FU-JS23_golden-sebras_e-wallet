@@ -1,7 +1,8 @@
+@use "../sass/" as *;
+@use "sass:map";
+
 .add-card {
   width: 25.875rem;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: map-get($theme-colors, "white");
+  @include flex(column, flex-start, center);
 }

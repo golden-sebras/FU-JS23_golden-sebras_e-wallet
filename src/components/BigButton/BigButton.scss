@@ -1,4 +1,7 @@
-a {
+@use "../../sass/" as *;
+@use "sass:map";
+
+.big-button {
   width: 100%;
   font-size: 22px;
   padding: 24.64px;
@@ -7,6 +10,6 @@ a {
   margin-top: 3rem;
   font-weight: 700;
   text-align: center;
-  border: 1px solid #000;
+  border: 1px solid map-get($theme-colors, "black");
   cursor: pointer;
 }

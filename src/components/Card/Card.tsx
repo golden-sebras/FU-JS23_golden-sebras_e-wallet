@@ -1,9 +1,9 @@
-import "./Card.scss";
-import Card from "../../types/card";
 import vendors from "../../assets/constants/vendors";
+import Card from "../../types/card";
 import Vendor from "../../types/vendor";
 import chipLogo from "../../assets/img/chip.png";
 import wifiLogo from "../../assets/img/wifi.png";
+import "./Card.scss";
 
 const CardComponent = ({
   card,
@@ -18,7 +18,7 @@ const CardComponent = ({
     <div
       className="card"
       style={{ backgroundColor: cardVendor.color, color: cardVendor.textColor }}
-      {...(makeCardActive ? { onClick: makeCardActive } : {})}
+      {...(makeCardActive ? { onClick: makeCardActive } : {})} // Kolla om parametern makeCardActive finns
     >
       <div className="card__header">
         <div className="card__wifi-chip-container">
