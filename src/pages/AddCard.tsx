@@ -41,9 +41,9 @@ const AddCard = () => {
           [name]: value,
         }));
     } else if (name === "name") {
-      const numbers = Number(value.match(/\d/g)?.join(""));
+      const nonLetters = value.match(/[^a-zA-Z\u00C0-\u017F\s]/g);
 
-      isNaN(numbers) &&
+      !nonLetters &&
         setTemporaryCard((prevInput) => ({
           ...prevInput,
           [name]: value,
